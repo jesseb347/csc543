@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hip-Hop Eras Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div id="map" style="height: 80vh;"></div>
+    <select id="era-select">
+        <option value="">Select an Era</option>
+        <option value="1990s">1990s</option>
+        <option value="2000s">2000s</option>
+        <option value="2010s">2010s</option>
+    </select>
+
+   
+    <div id="video" style="margin-top: 20px; text-align: center;">
+        <video width="100%" height="auto" controls>
+            <source src="assignment7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <h1>References</h1>
+    <ul>
+        <li><p>Galindo, T. (2023, May 3). Top 10 Hip-Hop Albums of the 2000s. American Songwriter. <a href="https://americansongwriter.com/top-10-hip-hop-albums-of-the-2000s/">https://americansongwriter.com/top-10-hip-hop-albums-of-the-2000s/</a></p></li>
+        <li><p>Quick Start Guide - Leaflet - a JavaScript library for interactive maps. (n.d.). Leafletjs.com. <a href="https://leafletjs.com/examples/quick-start/">https://leafletjs.com/examples/quick-start/</a></p></li>
+        <li><p>(n.d.). AOTY. <a href="https://www.albumoftheyear.org/genre/391-southern-hip-hop/2000s/">https://www.albumoftheyear.org/genre/391-southern-hip-hop/2000s/</a></p></li>
+        <li><p>devops. (2013, January 2). Hot Rap Songs. Billboard. <a href="https://www.billboard.com/charts/rap-song/2000-01-22/">https://www.billboard.com/charts/rap-song/2000-01-22/</a></p></li>
+        <li><p>Home - RIAA. (2015). RIAA. <a href="https://www.riaa.com/">https://www.riaa.com/</a></p></li>
+    </ul>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

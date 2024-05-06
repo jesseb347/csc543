@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article Data Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Insights from Cybersecurity Articles</h1>
+    <canvas id="cybersecurityChart"></canvas>
+
+    <script>
+        fetch('http://localhost:5000/api/data')
+            .then(response => response.json())
+            .then(data => {
+                const ctx = document.getElementById('cybersecurityChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: data.months,
+                        datasets: [{
+                            label: 'Cybersecurity Training Engagement',
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            data: data.training_engagement,
+                            fill: false,
+                        }, {
+                            label: 'Cybersecurity Conversations (HackerNets)',
+                            backgroundColor: 'rgb(54, 162, 235)',
+                            borderColor: 'rgb(54, 162, 235)',
+                            data: data.conversations,
+                            fill: false,
+                        }, {
+                            label: 'Cybersecurity Sessions for Children',
+                            backgroundColor: 'rgb(75, 192, 192)',
+                            borderColor: 'rgb(75, 192, 192)',
+                            data: data.sessions_for_children,
+                            fill: false,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: 'Cybersecurity Trends Over Months'
+                        },
+                        tooltips: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        hover: {
+                            mode: 'nearest',
+                            intersect: true
+                        },
+                        scales: {
+                            xAxes: [{
+                                display: true,
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Month'
+                                }
+                            }],
+                            yAxes: [{
+                                display: true,
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Count'
+                                }
+                            }]
+                        }
+                    }
+                });
+            });
+    </script>
+</body>
+</html>

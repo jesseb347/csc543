@@ -1,0 +1,109 @@
+div.www-presentation-header {
+    /* background-color=#FFFFF0; */
+    background-image: linear-gradient(to bottom right, white , blue);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 75px;
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: left;
+    border-style: solid;
+    /* background-color: #005A9C; */
+    border-bottom-width: thick;
+    border-bottom-color: #95ABD0;
+    /* padding-left: 5px;
+    padding-top: 5px; */
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+div.www-presentation-header-text {
+    position: absolute;
+    text-align: center;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+div.www-presentation-footer {
+    background-color: #01AAFF;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 20px;
+    width: 100%;
+}
+
+div.www-presentation-footer span {
+    font-size: 10pt;
+    position: absolute;
+    left: 15px;
+    bottom: 2px;
+}
+
+/* two-colomn layout */
+* {
+    box-sizing: border-box;
+  }
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.right-side-image {
+  float: right;
+  width: 300px;
+  border: 0px solid #004480;
+  padding: 10px;
+  }
+
+/* global properties to apply to all images */
+.img {
+    float: left;
+}
+
+/* colored text in any position */
+mark.purple {
+  color:black;
+  background: none;
+  text-shadow: 2px 1px #ff00ff;
+}
+
+mark.blue {
+  color:white;
+  background: #1123f0;
+  text-shadow: 2px 1px #0000ff;
+}
+
+mark.red {
+  color:black;
+  background: none;
+  text-shadow: 2px 1px #ff0000;
+}
+
+mark.green {
+  color:black;
+  background: none;
+  text-shadow: 2px 1px #00ff00;
+}
+
+/* email link */
+a.email:link {color:#eeff00;}
+a.email:hover {color:#ff00ee; background:#66ff66;}

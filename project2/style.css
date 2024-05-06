@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; }
+.container { max-width: 1200px; margin: auto; padding: 20px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+header, footer { background: #333; color: white; padding: 10px 20px; text-align: center; }
+.assignment { margin-bottom: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; }
+.detail { padding: 10px; border-top: 1px solid #ddd; display: none; }
+button { background: #007BFF; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; }
+button:hover { background: #0056b3; }

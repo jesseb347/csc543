@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentHour = new Date().getHours();
+
+            if (currentHour >= 6 && currentHour < 18) {
+                document.getElementById("stylesheet").href = "style1.css";
+            } else {
+                document.getElementById("stylesheet").href = "style2.css";
+            }
+        });
+    </script>
+    <link id="stylesheet" rel="stylesheet" href="">
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form action="/convert" method="post">
+        <label for="fahrenheit">Enter Fahrenheit:</label>
+        <input type="number" name="fahrenheit" required>
+        <button type="submit">Convert</button>
+    </form>
+    <h1>Assignment Reflection</h1>
+
+    <h2>3.1 Describe your data backup strategy for your CSC 543 coursework</h2>
+    <p> For all my coursework in CSC 543, I save everything on my Mac. It's my go-to machine, and I trust it... most of the time. I also throw some assignments up on OneDrive. So I can hop on any device with internet and pick up where i left off.</p>
+
+    <h2>3.2 Summarize your effort, in a way someone else might repeat, to complete this assignment</h2>
+    <p>This assignment was a real journey for me, especially being relatively new to the Computer Science field. One of the main challenges was the constant need for research to grasp the concepts required. Writing the Python script for the assignment and getting Flask up and running were definitely head-scratchers. Throughout the process, I leaned heavily on various online platforms that proved to be lifesavers. The information I found on  <a href="https://code.visualstudio.com/docs/python/tutorial-flask" target="_blank">Visual Studio Code</a>. really helped clarify things and provided valuable insights.</p>
+
+    <h2>3.3 Include in-sentence citations and a reference list in APA or IEEE format at the end of your web</h2>
+    <p>
+        <li>Download python. Python.org. (n.d.). https://www.python.org/downloads/</li> 
+       <li> Homebrew. (n.d.). https://brew.sh/ </li>
+       <li> Learn to code. W3Schools Online Web Tutorials. (n.d.). https://www.w3schools.com/ </li>
+       <li> Microsoft. (2021, November 3). Python and Flask Tutorial in visual studio code. RSS. https://code.visualstudio.com/docs/python/tutorial-flask </li></p>
+
+
+</body>
+</html>

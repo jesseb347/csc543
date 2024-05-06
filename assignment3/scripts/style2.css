@@ -1,0 +1,40 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 2px solid #e9c80c;
+  border-radius: 8px;
+  background-color: #690a8b;
+}
+
+h1 {
+  color: #eed00f;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000000a2;
+}
+
+input {
+  width: calc(100% - 10px);
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #e8da14;
+}
+
+select {
+  width: calc(100% - 10px);
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #dfd515;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #ab0fbf;
+  border-radius: 5px;
+}

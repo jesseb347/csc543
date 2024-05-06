@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="author" content="Phil Barello" />
+  <title>Presentation Template</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="scripts/slidy.css" /> <!-- http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css -->
+  <script src="scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script> <!-- http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js-->
+  <script src="scripts/jquery-3.3.1.min.js"
+    charset="utf-8" type="text/javascript"></script> <!-- https://code.jquery.com/jquery-3.3.1.min.js -->
+  <script type="text/javascript" src="scripts/qrcode.js"></script>
+</head>
+
+<style>
+
+  /* two-colomn layout */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .right-side-image {
+    float: right;
+    width: 300px;
+    border: 0px solid #004480;
+    padding: 10px;
+  }
+
+  /* global properties to apply to all images */
+  .img {
+    float: left;
+  }
+
+  /* qrcode generator image size */
+  #qrcode {
+    width:160px;
+    height:160px;
+    margin-top:15px;
+  }
+
+  /* email link */
+  a.email:link {color:#eeff00;}
+  a.email:hover {color:#ff00ee; background:#66ff66;}
+</style>
+<body>
+<div class="slide titlepage">
+  <h1 class="title"><font color = "#CFB53B">Assignment 3</font><br><font color = "#4B006E"> CSC 543</font></h1>
+  <p class="author"><p>Jesse Boateng</p>
+  <p class="date">Computer Science Department <br><font color = "#8080FF" style="text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Southern Connecticut State University</font></p>
+  <button id="view-fullscreen">*</button>
+  <script type="text/javascript">
+    (function () {
+        var viewFullScreen = document.getElementById("view-fullscreen");
+        if (viewFullScreen) {
+            viewFullScreen.addEventListener("click", function () {
+                var docElm = document.documentElement;
+                if (docElm.requestFullscreen) {
+                    docElm.requestFullscreen();
+                }
+                else if (docElm.msRequestFullscreen) {
+                    docElm = document.body; //overwrite the element (for IE)
+                    docElm.msRequestFullscreen();
+                }
+                else if (docElm.mozRequestFullScreen) {
+                    docElm.mozRequestFullScreen();
+                }
+                else if (docElm.webkitRequestFullScreen) {
+                    docElm.webkitRequestFullScreen();
+                }
+            }, false);
+        }
+
+        var cancelFullScreen = document.getElementById("cancel-fullscreen");
+        if (cancelFullScreen) {
+            cancelFullScreen.addEventListener("click", function () {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+                else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+                else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                }
+                else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                }
+            }, false);
+        }
+
+        var fullscreenState = document.getElementById("fullscreen-state");
+        if (fullscreenState) {
+            document.addEventListener("fullscreenchange", function () {
+                fullscreenState.innerHTML = (document.fullscreenElement)? "" : "not ";
+            }, false);
+
+            document.addEventListener("msfullscreenchange", function () {
+                fullscreenState.innerHTML = (document.msFullscreenElement)? "" : "not ";
+            }, false);
+
+            document.addEventListener("mozfullscreenchange", function () {
+                fullscreenState.innerHTML = (document.mozFullScreen)? "" : "not ";
+            }, false);
+
+            document.addEventListener("webkitfullscreenchange", function () {
+                fullscreenState.innerHTML = (document.webkitIsFullScreen)? "" : "not ";
+            }, false);
+        }
+
+    })();
+    </script>
+</p>
+</div>
+<body>
+
+<div class="section slide level1" id="Webprogrammingexperience">
+  <h1>Introduction</h1>
+  <ul class="incremental">
+    
+  <ul><p>To obtain the results for this assignment, I thoroughly reviewed all the presentations from Assignment 1. I compiled and analyzed the data provided by my classmates, extracting valuable insights on their preferred methods in various aspects of web design. This involved creating graphs to visualize the choices made by individuals in terms of code editors, programming languages, frameworks, data sources, file transfer utilities, web browsers, and operating systems. The comprehensive analysis allowed me to gain an understanding of the diverse preferences within our class, contributing to a more informed perspective on the tools and technologies favored by our peers in the field of web design. </p>
+    <p><!-- thinkinggif.gif -->
+      <img src="images/thinkinggif.gif" alt="Your GIF Description" style="width: 300px; height: auto;">
+    </p>
+  
+</div>
+<div class="section slide level1" id="frameworks">
+  <h1>Code editiors </h1>
+  <p><!-- codegraph.png -->
+    <img src="images/codegraph.png" alt="Your Image Description" style="width: 50%; height: auto;"></p>
+    <p>Most people in our group really liked using Visual Studio Code for coding. It's super popular because it has a bunch of cool features and is easy to use, making it the go-to choice for most of us.</p>
+    <ul><p> <ul class="incremental">
+      <p>Advantages</p>
+      <li>Visual Studio Code boasts a vast array of extensions contributed by the community, enhancing functionality and supporting various programming languages, frameworks, and tools. </li>
+      <li>The built-in version control features, such as Git integration, facilitate seamless collaboration and code management directly within the editor environment.</li>
+      <p>Disadvantages</p>
+      <li>Visual Studio Code can be resource-intensive, especially when working on larger projects, potentially affecting performance on less powerful hardware.</li>
+      <li>While the core functionality is user-friendly, mastering advanced features and customization options might require a learning curve for some users.</li>
+    
+
+    </ul>
+  
+  <p> 
+  </ul>
+</div>
+<div class="section slide level1" id="projects">
+  <h1> Program languages</h1>
+  <ol class="incremental" style="list-style-type: decimal">
+  <p><!-- programgraph.png -->
+    <img src="images/programgraph.png" alt="Your Image Description" style="width: 50%; height: auto;"></p></p>
+
+  </ol></li>
+</div>
+
+<div class="section slide level1" id="projects">
+  <h1> Framework</h1>
+  <ol class="incremental" style="list-style-type: decimal">
+  <p><!-- frameworkgraphgraph.png -->
+    <img src="images/framework.png" alt="Your Image Description" style="width: 50%; height: auto;"></p></p>
+
+    <p>As the semester progresses, I plan to expand my understanding by delving into research on various frameworks. Despite my limited background, I am committed to exploring and gaining insights into different frameworks to enhance my knowledge and skills in the subject matter. </p>
+
+  </ol></li>
+</div>
+<div class="section slide level1" id="projects">
+  <h1> Operating system</h1>
+  <ol class="incremental" style="list-style-type: decimal">
+ <p>The majority of the class, comprising around 85%, favors the use of Windows as their preferred operating system.</p>
+ <p>Advantages</p>
+ <li>Windows provides an intuitive and user-friendly interface, catering to both beginners and experienced developers.</li>
+ <li> The vast user community contributes to a wealth of online resources, forums, and tutorials, making it easier to find solutions to common issues.</li>
+ <p>Disadvantages</p>
+<li>Windows can be resource-intensive, especially when running resource-heavy development tools, potentially impacting performance on less powerful hardware.</li>
+<li>Windows is often targeted by malware and security threats, requiring extra precautions to ensure a secure development environment.
+</li>
+  </ol></li>
+</div>
+
+<div class="section slide level1" id="projects">
+  <h1> File transfer</h1>
+  <ol class="incremental" style="list-style-type: decimal">
+  <p>The preferred file transfer tool for the majority of the class is FileZilla. This choice is based on its user-friendly interface and efficient file transfer capabilities. However, it's essential to consider both advantages and disadvantages. </p>
+  <p>Advantages</p>
+  <li>FileZilla is known for its intuitive and easy-to-use interface, making it accessible for users with varying levels of technical expertise.
+    Efficient File Transfer: The tool facilitate</li>
+  <li> The tool facilitates swift and reliable file transfers, contributing to increased productivity and streamlined data sharing.
+  </li>
+  <p>Disadvantages</p>
+  <li>FileZilla has faced criticism for potential security vulnerabilities in the past, raising concerns about the safety of sensitive data during transfers.</li>
+  <li>While suitable for basic file transfers, FileZilla may lack some advanced features found in other FTP tools, limiting its capabilities for more complex tasks.</li>
+  </ol></li>
+</div>
+
+<div class="section slide level1" id="questions">
+  <h1>Web browsers</h1>
+  <!-- webgraph.png -->
+  <img src="images/webgraph.png" alt="Your Image Description" style="width: 50%; height: auto;">
+  <ul class="incremental">
+    <li>Google Chrome took the lead as the preferred web browser in this class.</li>
+    <li>Advantages</li>
+    <ul>
+      <li>Catering to both beginners and experienced developers.</li>
+      <li>The vast user community contributes to a wealth of online resources, forums, and tutorials, making it easier to find solutions to common issues.</li>
+    </ul>
+    <li>Disadvantages</li>
+    <ul>
+      <li>Windows can be resource-intensive, especially when running resource-heavy development tools, potentially impacting performance on less powerful hardware.</li>
+      <li>Windows is often targeted by malware and security threats, requiring extra precautions to ensure a secure development environment.</li>
+    </ul>
+  </ul>
+</div>
+    
+    <br><br><br><br><br><br><br><br><br>
+    </body>
+    </html>
+    

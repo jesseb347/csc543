@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link id="selectedStyle" rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Converter</h1>
+    <p>
+      <label for="inputFahrenheit">Fahrenheit:</label>
+      <input id="inputFahrenheit" type="number" placeholder="Enter Fahrenheit"
+        oninput="convertTemperature()" onchange="convertTemperature()">
+    </p>
+    <p>Celsius: <span id="outputCelsius"></span></p>
+    <label for="cssSelector">Select Style:</label>
+    <select id="cssSelector" onchange="changeStyle()">
+      <option value="/Users/jesseboateng/Desktop/assignment3/scripts/style1.css">Style 1</option>
+      <option value="/Users/jesseboateng/Desktop/assignment3/scripts/style2.css">Style 2</option>
+    </select>
+
+  </div>
+
+  <script src="assignment3.js"></script>
+
+  <br>
+  <h2>Understanding Client and Server Componets</h2>
+  <ul>
+   <p><li>A client is <em>any computer hardware or software device that requestes access to a service.</em> So, in Assignment 3, when we talk about the 'client,' we're basically referring to your computer and the web browser you're using. When you enter a value for Fahrenheit, your computer and browser send a request to the server for temperature conversion and style changes.</li></p> 
+
+    <p> To learn more about the client & server:</p>
+     <li>
+      <a
+      href="https://developer.mozilla.org/en-US"
+      title="The best place to find more information">
+       Mdn </a>.</li>
+       <li>
+        <a
+      href="https://www.w3schools.com"
+      title="The best place to find more information">
+       w3schools </a>.</li>
+       </li>
+  <br><br><br>    
+       <h2> Demonstrate awareness of markup and scripting languages integrated for a purpose</h2>
+       <ul>
+      <p><li>HTML plays a significant role in structuring the content and defining the user interface of the Temperature Converter. For instance, it is instrumental in creating essential elements such as the input field and the display area.</li></p>
+      <p><li>CSS is responsible for styling and formatting the elements of the Temperature Converter.</li></p>
+      <p><li>JavaScript adds behavior to the Temperature Converter, enabling user interaction and providing real-time updates on the temperature.</li></p>
+  </ul>
+</body>
+</html>

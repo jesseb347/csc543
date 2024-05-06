@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC 543 Portfolio Overview</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #3a3a52; color: #333; }
+        header, footer { background: #3a3838; color: white; padding: 10px 20px; text-align: center; }
+        nav a { color: rgb(75, 155, 217); margin: 0 10px; text-decoration: none; }
+        section { padding: 20px; margin: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .visual { padding: 10px; background: #eee; border-radius: 5px; margin-top: 10px; }
+        footer p { margin: 0; font-size: 14px; }
+
+        .img-box {
+            width: 300px;  
+            height: 200px; 
+            overflow: hidden; 
+        }
+
+        .img-box img {
+            width: 100%;  
+            height: auto; 
+        }
+        .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1 Overview</h1>
+        <nav>
+            <a href="#feedback">Feedback Summary</a>
+            <a href="#cmmi">CMMI & NASA TRL</a>
+            <a href="#backup">Data Backup Status</a>
+            <a href="#compliance">NIST Compliance</a>
+        </nav>
+    </header>
+
+    <section id="feedback">
+        <h2>Feedback Summary</h2>
+        <p>Unfortunately, I did not receive any feedback for Project 1. I will provide what I believe my CMMI maturity and NASA TRL assessment are for Project 1, drawing from my understanding of the project's development process and technical readiness level.</p>
+        <ul>
+            <li><a href="https://167.99.253.247/csc543/boatengj3/Project1/">Link to Project 1</a></li>
+        </ul>
+    </section>
+
+    <section id="cmmi">
+        <h2>CMMI Maturity and NASA TRL Assessment</h2>
+        <p>Below are my assessments based on my understanding:</p>
+        <ul>
+            <li><strong>CMMI Level 2:</strong> Managed - It demonstrates that processes are planned and executed in response to specific needs, such as addressing cybersecurity threats in social media. There's evidence of project management and process discipline to achieve the set goals, although it may not be optimized across all areas.</li>
+            <li><strong>NASA TRL 4:</strong> Technology validated in lab - Based on my evaluation, my project seems to align with NASA TRL 4, indicating that the technology has been validated in a lab environment. This assessment is supported by successful testing and functionality of the implementations, which have been operational in a local testing environment.</li>
+        </ul>
+        <div class="visual">
+            <img src="images/Characteristics_of_Capability_Maturity_Model.svg.jpg" alt="CMMI" width="400" height="400">
+            <img src="images/trl.jpg" alt="TRL" width="400" height="400">
+        </div>
+    </section>
+
+    <section id="backup">
+        <h2>Current US-CERT 3-2-1 Data Backup Status</h2>
+        <p>Currently, my data backup strategy for the CSC 543 portfolio is quite basic. All materials related to this class are saved in a folder labeled "CSC543" which is stored solely on my MacBook Pro. This approach can potentially present significant risks, such as data loss due to hardware failure, accidental deletion, or potential cybersecurity threats that could compromise the integrity of my laptop.</p>
+        <div class="visual">
+            <img src="images/data.png" alt="Data Backup Diagram" width="600" height="400">
+        </div>
+    </section>
+
+    <section id="optimize">
+        <h2>Paths to Optimizing US-CERT 3-2-1 Data Backup Status</h2>
+        <p>To optimize my CSC 543 portfolio, I plan to create at least two additional copies of the data so that three copies exist. I will then save them on different media types to avoid a single point of failure. The data will be stored on an external hard drive and in the cloud.</p>
+        <div class="visual">
+            <ul>
+                <li>External Hard Drive</li>
+                <img src="images/exharddrive.jpeg" alt="External Hard Drive" width="400" height="300">
+                <li>Google Drive</li>
+                <img src="images/Google.png" alt="Google Drive" width="300" height="300">
+                <li>iCloud</li>
+                <img src="images/iCloud-Logo.jpg" alt="iCloud" width="300" height="300">
+                <li><strong>Regular Backup Schedule:</strong> Set up a regular backup schedule to automatically sync files between my MacBook, the external hard drive, and the cloud service. This will help maintain current backups across all platforms.</li>
+            </ul>
+        </div>
+    </section>
+
+   
+        <section id="compliance">
+            <h2>NIST CSF2 PR.DS Compliance</h2>
+            <h3>Data Security (PR.DS)</h3>
+            <ul>
+                <li>
+                    <strong>PR.DS-01: Data-at-Rest</strong>
+                    <p>Given that the data in my CSC 543 portfolio does not contain sensitive data, extensive encryption is not currently employed. However, access to the data at rest requires a password to my computer, ensuring basic security measures are in place to protect against unauthorized access.</p>
+                </li>
+                <li>
+                    <strong>PR.DS-02: Data-in-Transit</strong>
+                    <p>Data in transit is secured using SFTP via Filezilla to the class server, which is accessible only with my username and password. I am sure that the data on the class server is encrypted and securely maintained.</p>
+                </li>
+                <li>
+                    <strong>PR.DS-10: Data-in-Use</strong>
+                    <p>While my CSC 543 portfolio does not include sensitive data requiring encrypted protection while in use, security measures are in place to ensure the integrity and confidentiality of data. This includes operating system security and application-level permissions, which require user authentication to access and manipulate data.</p>
+                </li>
+                <li>
+                    <strong>PR.DS-11: Data Backups</strong>
+                    <p>Currently, systematic testing of backup integrity and recoverability is not regularly performed. To improve this, I plan to implement monthly backup tests. This will involve manually restoring a selection of files from the backup to verify their integrity and ensure that all data remains accessible and uncorrupted. Additionally, I will review the security settings of the backup storage to confirm that data protection measures like access controls are appropriately maintained.</p>
+                </li>
+            </ul>
+        </section>
+        
+    </section>
+
+    <section id="video">
+        <h2>Video Summary</h2>
+         <div class="video-container">
+                <iframe src="assignment8.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>For any questions, <a href="mailto:jesseboateng3@gmail.com">Email Me</a></p>
+    </footer>
+</body>
+</html>
